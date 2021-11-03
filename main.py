@@ -30,6 +30,11 @@ def geometriksa():
 
     r = e * 100
 
+    if q < 0:
+        return print("첫 번째 숫자는 음수일 수 없습니다. 다시 시도해 주세요.")
+    elif w < 0:
+        return print("두 번째 숫자는 음수일 수 없습니다. 다시 시도해 주세요.")
+    print(r, "%", "그리고 확률 , 선택한 점이 두 그림과 일치하는지 확인")
     print("확률은" + format( r, ",.2f")+"%")
     if r>100:
         print("확률은 100%를 초과해서는 안 됩니다.")
@@ -42,9 +47,15 @@ def klasiska():
     w = int(input("イベントの総数を教えてください: "))
 
     e = q/w
-    d = e * 100
+    r = e * 100
 
-    print("確率は = " + format(d, ",.2f")+"%")
+    if q < 0:
+        return print("最初の数値を負にすることはできません。もう一度やり直してください")
+    elif w < 0:
+        return print("2番目の数値を負にすることはできません。もう一度やり直してください")
+    print("", q, "好意的なイベント ", w, "時間は起こります:", e, "%")
+    print("確率は = " + format(r, ",.2f")+"%")
+
 
 
 if __name__ == '__main__':
